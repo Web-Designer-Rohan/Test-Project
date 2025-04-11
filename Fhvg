@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --deep-space: #0d1b2a;
+            --cosmic-blue: #1b263b;
+            --stellar-gray: #415a77;
+            --nebula-light: #778da9;
+            --void-white: #e0e1dd;
+            --security-green: #5bc0be;
+            --alert-red: #f1343d;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: var(--deep-space);
+            color: var(--void-white);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        header {
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            color: var(--security-green);
+            margin-bottom: 1rem;
+        }
+
+        nav {
+            margin: 2rem 0;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: var(--nebula-light);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--security-green);
+        }
+
+        /* Portfolio Section */
+        .portfolio-section {
+            padding: 3rem 0;
+            background: linear-gradient(135deg, var(--cosmic-blue) 0%, var(--deep-space) 100%);
+        }
+
+        .section-title {
+            text-align: center;
+            color: var(--security-green);
+            margin-bottom: 2rem;
+            font-size: 2.2rem;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 0 2rem;
+        }
+
+        .project-card {
+            background: rgba(27, 38, 59, 0.7);
+            border-radius: 10px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(91, 192, 190, 0.2);
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(91, 192, 190, 0.2);
+            border-color: var(--security-green);
+        }
+
+        .project-icon {
+            font-size: 2.5rem;
+            color: var(--security-green);
+            margin-bottom: 1rem;
+        }
+
+        .project-card h3 {
+            color: var(--void-white);
+            margin-bottom: 0.5rem;
+        }
+
+        .project-card p {
+            color: var(--nebula-light);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            color: var(--security-green);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .project-link:hover {
+            color: #6fffe9;
+        }
+
+        .project-link i {
+            margin-left: 0.5rem;
+            font-size: 0.8rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            color: var(--nebula-light);
+            margin-top: 3rem;
+            border-top: 1px solid var(--stellar-gray);
+        }
+
+        @media (max-width: 768px) {
+            .project-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">Portfolio</div>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section id="projects" class="portfolio-section">
+            <h2 class="section-title">My Projects</h2>
+            
+            <div class="project-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>VulnVault</h3>
+                    <p>Security research blog covering vulnerabilities and exploits</p>
+                    <a href="https://vulnvault.blogspot.com/" target="_blank" rel="noopener noreferrer" class="project-link">
+                        Visit Site <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h3>VaultNexus</h3>
+                    <p>Secure collaboration platform with encrypted communications</p>
+                    <a href="http://vaultnexus.unaux.com/" target="_blank" rel="noopener noreferrer" class="project-link">
+                        Visit Site <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>SchoolSecret</h3>
+                    <p>Educational resource portal with secure document sharing</p>
+                    <a href="http://schoolsecret.unaux.com/" target="_blank" rel="noopener noreferrer" class="project-link">
+                        Visit Site <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2023 My Portfolio. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
