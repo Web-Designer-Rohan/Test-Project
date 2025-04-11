@@ -1,0 +1,131 @@
+:root {
+    --primary: #2b2959;
+    --secondary: #fccc1c;
+    --accent: #1d8f8b;
+    --dark: #06050d;
+    --text: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(rgba(6, 5, 13, 0.9), rgba(6, 5, 13, 0.9)),
+                url('../images/bg1.jpg') center/cover fixed;
+    color: var(--text);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-card {
+    background: rgba(43, 41, 89, 0.6);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 3rem;
+    text-align: center;
+    transform: translateY(0);
+    transition: transform 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    width: 100%;
+    max-width: 600px;
+}
+
+.profile-card:hover {
+    transform: translateY(-10px);
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid var(--secondary);
+    margin-bottom: 1.5rem;
+    object-fit: cover;
+    animation: float 3s ease-in-out infinite;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--secondary);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.tagline {
+    color: var(--accent);
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+}
+
+.social-links {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    color: var(--text);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.social-link:hover {
+    background: var(--accent);
+    transform: scale(1.05);
+}
+
+.social-link i {
+    font-size: 1.5rem;
+    min-width: 24px;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+@media (max-width: 768px) {
+    body {
+        background: linear-gradient(rgba(6, 5, 13, 0.9), rgba(6, 5, 13, 0.9)),
+                    url('../images/bg.jpg') center/cover fixed;
+    }
+    
+    .container {
+        padding: 1rem;
+    }
+    
+    .profile-card {
+        padding: 2rem;
+        width: 90%;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+}
